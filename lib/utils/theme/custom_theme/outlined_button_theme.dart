@@ -6,30 +6,26 @@ import 'package:shop_nest/utils/constants/color.dart';
 class AppOutlinedButtonTheme{
   AppOutlinedButtonTheme._();
   static final lightOutlinedButtonThemeData = OutlinedButtonThemeData(
-      style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.white, // Background color
-        foregroundColor: Colors.blue,
-        disabledBackgroundColor: AppColors.grey,
-        disabledForegroundColor: AppColors.grey,// Text color
+      style: OutlinedButton.styleFrom(
+        elevation: 0,
+        foregroundColor: Colors.black,
         side: BorderSide(color: Colors.blue),
-        padding: EdgeInsets.symmetric( vertical: 18),
-        textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w600,color: AppColors.white),
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+        textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w600,color: AppColors.black),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12), // Rounded corners
+          borderRadius: BorderRadius.circular(14), // Rounded corners
         ),
       )
   );
   static final darkOutlinedButtonThemeData = OutlinedButtonThemeData(
-      style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.white, // Background color
-        foregroundColor: Colors.blue,
-        disabledBackgroundColor: AppColors.grey,
-        disabledForegroundColor: AppColors.grey,// Text color
-        side: BorderSide(color: Colors.blue),
-        padding: EdgeInsets.symmetric( vertical: 18),
+      style: OutlinedButton.styleFrom(
+        elevation: 0,
+        foregroundColor: Colors.white,
+        side: BorderSide(color: Colors.blueAccent),
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
         textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w600,color: AppColors.white),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12), // Rounded corners
+          borderRadius: BorderRadius.circular(14), // Rounded corners
         ),
       )
   );
