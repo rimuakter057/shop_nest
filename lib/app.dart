@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'features/authentication/screens/on_boarding_screen/on_boarding_screen.dart';
+import 'package:shop_nest/features/authentication/screens/team_list_screen/team_list_screen.dart';
 
 class ShopNest extends StatelessWidget {
   const ShopNest({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: OnBoardingScreen(),
+      home: TeamListScreen(),
     );
   }
 }

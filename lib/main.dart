@@ -11,9 +11,13 @@ ios       1:654143007679:ios:2a2cf4d09344f75c478f0a*/
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Firebase সঠিকভাবে ইনিশিয়ালাইজ করা
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  // পারফরম্যান্স প্রোফাইলিং ব্যবহার করতে চাইলে এটা রাখতে পারো
   debugProfileBuildsEnabled = true;
   runApp(const ShopNest());
 }
