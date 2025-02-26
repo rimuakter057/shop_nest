@@ -91,13 +91,12 @@ _footballScoreList.add(FootballScore.fromJson(doc.data(), doc.id));
               ),
               leading: CircleAvatar(
                 backgroundColor: score.isRunning ? Colors.green : Colors.grey,
-                radius: 8,
+                radius: 10,
               ),
             );
           },
         ),
       ),
-
     );
   }
 }
