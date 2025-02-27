@@ -51,7 +51,6 @@ Future<void> onBackgroundNotification(RemoteMessage message) async {
 }
 */
 
-
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 void getFCMToken() async {
