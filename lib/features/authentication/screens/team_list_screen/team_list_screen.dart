@@ -22,7 +22,7 @@ class _TeamListScreenState extends State<TeamListScreen> {
     // TODO: implement initState
     super.initState();
     _getLiveScoreList();
-    getFCMToken();
+
   }
 
   Future <void> _getLiveScoreList()async{

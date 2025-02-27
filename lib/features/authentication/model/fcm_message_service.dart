@@ -1,13 +1,52 @@
-/*
-
-
-
-
-
 
 import 'package:firebase_messaging/firebase_messaging.dart';
 
-class FcmMessageService {
+class FcmMessageService{
+  final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
+  Future <void>  initialize()async{
+    await _firebaseMessaging.requestPermission(
+        alert: true,
+        sound: true
+    );
+
+    FirebaseMessaging.onMessage.listen(onForegroundNotificationReceive) ;
+    FirebaseMessaging.onMessageOpenedApp.listen(onBackgroundNotificationReceive);
+    FirebaseMessaging.onBackgroundMessage(onBackgroundNotification);
+  }
+
+
+
+  void onForegroundNotificationReceive(RemoteMessage message) {
+    print(message);
+    print(message.notification?.title);
+    print(message.notification?.body);
+  }
+
+  void onBackgroundNotificationReceive(RemoteMessage message){
+    print(message);
+  }
+
+  Future <void> onBackgroundNotification(RemoteMessage message)async {
+
+  }
+  Future<String?> getFcmToken()async{
+    return await _firebaseMessaging.getToken();
+  }
+
+void onTokenRefresh(){
+_firebaseMessaging.onTokenRefresh.listen((token) {
+
+});
+}
+
+}
+
+
+
+
+
+
+/*class FcmMessageService {
   final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
 
   Future<void> initialize() async {
@@ -48,15 +87,5 @@ class FcmMessageService {
 
 Future<void> onBackgroundNotification(RemoteMessage message) async {
 
-}
-*/
+}*/
 
-import 'package:firebase_messaging/firebase_messaging.dart';
-
-void getFCMToken() async {
-  FirebaseMessaging messaging = FirebaseMessaging.instance;
-
-  // Get the token
-  String? token = await messaging.getToken();
-  print("FCM Token: $token");
-}
