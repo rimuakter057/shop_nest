@@ -1,0 +1,2 @@
+G:/shop_nest/android/app/.cxx/Debug/5r5y531i/x86_64/CMakeFiles/edit_cache.dir
+G:/shop_nest/android/app/.cxx/Debug/5r5y531i/x86_64/CMakeFiles/rebuild_cache.dir

@@ -5,7 +5,9 @@ import 'package:shop_nest/features/authentication/model/football_score_model.dar
 
 
 class TeamListScreen extends StatefulWidget {
+  static const String routeName = '/team-list-screen';
   const TeamListScreen({super.key});
+
 
   @override
   State<TeamListScreen> createState() => _TeamListScreenState();
